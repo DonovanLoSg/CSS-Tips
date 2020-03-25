@@ -1,0 +1,22 @@
+body {
+    margin: 20px;
+    padding-bottom: 50px;
+}
+
+#howto {
+    border: 1px solid darkred;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+#examples {
+    font-style: italic;
+    color: blue;
+}
+
+pre {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+}
