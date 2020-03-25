@@ -1,7 +1,25 @@
 body {
     margin: 20px;
     padding-bottom: 50px;
+
 }
+
+#title {
+    color: black
+}
+
+h1 {
+    color: darkred;
+}
+
+h2 {
+    color: red;
+}
+
+h3 {
+    color: darkorange;
+}
+
 
 #howto {
     border: 1px solid darkred;
@@ -9,14 +27,17 @@ body {
     margin-bottom: 30px;
 }
 
-#examples {
+.examples {
     font-style: italic;
     color: blue;
 }
 
-pre {
+code {
   display: block;
   font-family: monospace;
   white-space: pre;
   margin: 1em 0;
+  border: 1px solid black;
+  overflow: hidden;
 }
+

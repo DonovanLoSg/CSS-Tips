@@ -1,115 +1,282 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CSS Tips</title>
-    <link href="css/style.css" rel="stylesheet">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link href="css/style.css" rel="stylesheet">
+
+	<title>CSS Styling Tips</title>
 </head>
+
 <body>
 
-<img src="http://www.donovanlo.sg/images/donovanlogo150x131.png" alt="by Donovan" class="float-left m-4">
+	<img src="http://www.donovanlo.sg/images/donovanlogo150x131.png" alt="by Donovan" class="float-left m-4"><br>
+	<h1 id="title">CSS Styling Tips</h1>
 
-<h1>CSS Styling Tips</h1>
+	<div id="howto">
+		<p> This are some simple tips I use. It's a result of compiling and digesting those CSS syntax and
+			lessons.<br><br></p>
+	</div>
 
-<div class="howto">This are some simple tips I use. It's a result of compiling and digesting those CSS syntax and lessons.</div>
- 
-<h2>Catch the Problem before It Happens</h2>
- 
-<p>You wouldn't want to find out you page looks different or have certain problem after you have completed all the styling, would you?</p>
- 
-<h3>Use a CSS Reset</h3>
-<p>In case you didn’t know, every browser has its own default ‘user agent’ stylesheet, that it uses to make unstyled websites appear more legible. (Ever wondered why Submit buttons look different in every browser?) A CSS Reset give developer a better control of the style, but that also means that the developer has to style from the basics, including H1 to H6.</p>
-<p class="examples">(explanation: <a href="https://meyerweb.com/eric/tools/css/reset/index.html" target="_blank")> https://meyerweb.com/eric/tools/css/reset/index.html) </a></p>
- 
-<h3>Include a diagnostics CSS</h3>
-<p>Don't worry, it won't break your code. </p>
-<p>If your codes are good, this will most probably be invisible.
-<a href="https://meyerweb.com/eric/tools/css/diagnostics/diagnostic.css" target="_blank">https://meyerweb.com/eric/tools/css/diagnostics/diagnostic.css</a></p>
-<p class="examples">(explanation: <a href="https://24ways.org/2007/diagnostic-styling" target="_blank">https://24ways.org/2007/diagnostic-styling)</a></p>
- 
-<h2>Bull's eye identification</h2>
- 
-<p>It will difficult to make changes to an element if you can't easily identify an element.</p>
-<p>You will know what I mean if you are using JavaScript, DOM, jQuery etc.</p>
- 
-<h3>Identifying the target</h3>
-<p>If you need to target an individual element, use #id.</p>
-<p class="examples">e.g. #hero-image</p>
- 
-<p>If that content element appears only once per page, identify them uniquely by their purpose on the page.</p>
-<p>They can follow their semantic html tags.</p>
-<p class="examples">e.g. #header-something, #main-something, #footer-something</p>
+	<h2>Catch the Problem before It Happens</h2>
 
-<h3>Classify the targets</h3>
- 
-<p>If they appears more than one time, use class for identification, still following semantic tags whenever possible.</p>
-<p class="examples">e.g. .header-something, .main-something, .footer-something</p>
- 
-<p>It should help to cover most of the items on the page. 
-Else you can also create a special id or class to ease identification.</p>
+	<p>You wouldn't want to find out you page looks different or have certain problem after you have completed all the
+		styling, would you?</p>
 
-<p class="examples">e.g. #map-restaurant, #diagram-family-tree</p>
- 
-<p>If a content element need to chain more than three selectors to pinpoint it, it’s too many.</p>
+	<h3>Use a CSS Reset</h3>
+	<p>In case you didn’t know, every browser has its own default ‘user agent’ stylesheet, that it uses to make unstyled
+		websites appear more legible.</p>
+    <p>
+        (Ever wondered why Submit buttons look different in every browser?) A CSS Reset
+		give developer a better control of the style, but that also means that the developer has to style from the
+		basics, including H1 to H6.</p>
+	<p class="examples">(explanation: <a href="https://meyerweb.com/eric/tools/css/reset/index.html" target="_blank" )>
+			https://meyerweb.com/eric/tools/css/reset/index.html) </a></p>
 
-<p class="examples">e.g. body > section > div > p > p > ul > li > ul > li> span</p>
- 
-<h2>Eagle view style</h2>
- 
-<h3>Comment your stylesheet.</h3>
+	<h3>Include a diagnostics CSS</h3>
+	<p>Don't worry, it won't break your code. </p>
+	<p>If your codes are good, this will most probably be invisible.
+		<a href="https://meyerweb.com/eric/tools/css/diagnostics/diagnostic.css"
+			target="_blank">https://meyerweb.com/eric/tools/css/diagnostics/diagnostic.css</a></p>
+	<p class="examples">(explanation: <a href="https://24ways.org/2007/diagnostic-styling"
+			target="_blank">https://24ways.org/2007/diagnostic-styling)</a></p>
 
-<p>Add lines of comments like what you would do in the page itself.</p>
-<p class="examples">e.g.<br>
-/****** main content *********/<br>
-/****** footer content *********/</p>
- 
-<p>It will ease the job of locating a certain rules.</p>
-<p>It's even more obvious if you can open the html file and the css file side by side to do the styling.</p>
- 
-<h3>Group common effect</h3>
-<p>If it's a certain style that may apply to different parts of the page, describe the style</p>
-<p class="examples">e.g. <br>
-.border-green {border: 1px solid green};<br>
-.margin-zero {margin: 0};</p>
- 
-<h2>Prevent Cross Infection</h2>
- 
-<p>Sometimes, after you style a page to your liking, then you realized that you have unintentionally affected the layout on the other pages of the side.</p>
-<p>Sometimes, the css file can get very long if there are many pages and there's many elements using Id.</p>
- 
-<h3>Use separate CSS files</h3>
-<p>Use a common css file for the common items in every page of the site.</p>
-<p class="examples">e.g. style.css</p>
-<p>Then add another css file that belong exclusively to each page.</p>
-<p class="examples"> class="examples"e.g. home.css, contact.css, article.css</p>
+	<h2>Bull's eye identification</h2>
 
-<p>This way, it will be easy to know whether the rules you are changing will affect the other pages.</p>
- 
- 
-<h2>Structure, Content before Styling</h2>
+	<p>It will difficult to make changes to an element if you can't easily identify an element.</p>
+	<p>You will know what I mean if you are using JavaScript, DOM, jQuery etc.</p>
 
-<p>Know how your web pages will be divided into so you know where the content will go to.</p>
-<p class="examples">
-<code><pre>
-    <head>        
-    </head>
-    <body>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        :
-        <p></p>
-</pre></code>
- https://www.onblastblog.com/css3-cheat-sheet/
+	<h3>Identifying the target</h3>
+	<p>If you need to target an individual element, use #id.</p>
+	<p class="examples">e.g. #hero-image</p>
+
+	<p>If that content element appears only once per page, identify them uniquely by their purpose on the page.</p>
+	<p>They can follow their semantic html tags.</p>
+	<p class="examples">e.g. #header-something, #main-something, #footer-something</p>
+
+	<h3>Classify the targets</h3>
+
+	<p>If they appears more than one time, use class for identification, still following semantic tags whenever
+		possible.</p>
+	<p class="examples">e.g. .header-something, .main-something, .footer-something</p>
+
+	<p>It should help to cover most of the items on the page.
+		Else you can also create a special id or class to ease identification.</p>
+
+	<p class="examples">e.g. #map-restaurant, #diagram-family-tree</p>
+
+	<p>If a content element need to chain more than three selectors to pinpoint it, it’s too many.</p>
+
+	<p class="examples">e.g. body > section > div > p > p > ul > li > ul > li> span</p>
+
+	<h2>Eagle view style</h2>
+
+	<h3>Comment your stylesheet.</h3>
+
+	<p>Add lines of comments like what you would do in the page itself.</p>
+	<p class="examples">e.g.<br>
+        /****** main content *********/<br>
+        /****** footer content *********/</p>
+
+    <p>It will ease the job of locating a certain rules.</p>
+    <p>It's even more obvious if you can open the html file and the css file side by side to do the styling.</p>
+
+    <h3>Group common effect</h3>
+    <p>If it's a certain style that may apply to different parts of the page, describe the style</p>
+    <p class="examples">e.g. <br>
+        .border-green {border: 1px solid green};<br>
+        .margin-zero {margin: 0};</p>
+
+    <h2>Prevent Cross Infection</h2>
+
+    <p>Sometimes, after you style a page to your liking, then you realized that you have unintentionally
+        affected the layout on the other pages of the side.</p>
+    <p>Sometimes, the css file can get very long if there are many pages and there's many elements using Id.</p>
+
+    <h3>Use separate CSS files</h3>
+    <p>Use a common css file for the common items in every page of the site.</p>
+    <p class="examples">e.g. style.css</p>
+    <p>Then add another css file that belong exclusively to each page.</p>
+    <p class="examples"> class="examples"e.g. home.css, contact.css, article.css</p>
+
+    <p>This way, it will be easy to know whether the rules you are changing will affect the other pages.</p>
 
 
+    <h2>Structure, Content before Styling</h2>
 
- 
- 
+    <p>Know how your web pages will be divided into so you know where the content will go to.</p>
+
+    <h3>Scenerio</h3>
+    <div class="box">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <code>
+&lt;head&gt;        
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt; Heading&lt;/h1&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p&gt; some examples &lt;/p&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p&gt; some examples&lt;/p&gt;
+    &lt;p&gt; more paragraphs &lt;/p&gt;
+    &lt;p&gt; more examples&lt;/p&gt;
+
+    :
+    &lt;p&gt; after the 100th paragraphs&lt;/p&gt;
+&lt;/body&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <p>If I decided that I should make the example italic by using '&lt;' and '&gt; while I was typing,
+            it will become like this</p>
+
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <code>
+&lt;head&gt;        
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt; Heading&lt;/h1&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p&gt; some examples &lt;/p&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p&gt; some examples&lt;/p&gt;
+    &lt;p&gt; more paragraphs &lt;/p&gt;
+    &lt;p&gt; more examples&lt;/p&gt;
+
+    :
+    &lt;p&gt; after the 100th paragraphs&lt;/p&gt;
+&lt;/body&gt;
+                    </code>
+                </div>
+                <div class="col-3">
+                    <code>
+&lt;head&gt;        
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt; Heading&lt;/h1&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p&gt;&lt;i&gt; some examples &lt;/i&gt;&lt;/p&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p&gt;&lt;i&gt; some examples &lt;/i&gt;&lt;/p&gt;
+    &lt;p&gt; more paragraphs &lt;/p&gt;
+    &lt;p&gt;&lt;i&gt; some examples &lt;/i&gt;&lt;/p&gt;
+
+    :
+    &lt;p&gt; after the 100th paragraphs&lt;/p&gt;
+&lt;/body&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <p>And later I decided that I should not use italic but bold. I can't select all the '&lt;i&gt;' and
+            '&lt;/i&gt;' to delete them cause I may have used them some where else too.</p>
+
+        <p>And even if I manually replace all the italic with bold, then i decided I want to change the
+            color to blue... anyway, you get the point.</p>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <code>
+&lt;head&gt;        
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt; Heading&lt;/h1&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p&gt; some examples &lt;/p&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p&gt; some examples&lt;/p&gt;
+    &lt;p&gt; more paragraphs &lt;/p&gt;
+    &lt;p&gt; more examples&lt;/p&gt;
+
+    :
+    &lt;p&gt; after the 100th paragraphs&lt;/p&gt;
+&lt;/body&gt;
+                    </code>
+                </div>
+                <div class="col-3">
+                    <code>
+&lt;head&gt;        
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt; Heading&lt;/h1&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p&gt;&lt;i&gt; some examples &lt;/i&gt;&lt;/p&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p&gt;&lt;i&gt; some examples &lt;/i&gt;&lt;/p&gt;
+    &lt;p&gt; more paragraphs &lt;/p&gt;
+    &lt;p&gt;&lt;i&gt; some examples &lt;/i&gt;&lt;/p&gt;
+
+    :
+    &lt;p&gt; after the 100th paragraphs&lt;/p&gt;
+&lt;/body&gt;
+                        </code>
+                </div>
+                <div class="col-3">
+                    <code>
+&lt;head&gt;        
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt; Heading&lt;/h1&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p class="examples"&gt;&lt;i&gt; some examples &lt;/i&gt;&lt;/p&gt;
+    &lt;p&gt; some paragraphs &lt;/p&gt;
+    &lt;p class="examples"&gt;&lt;i&gt; some examples &lt;/i&gt;&lt;/p&gt;
+    &lt;p&gt; more paragraphs &lt;/p&gt;
+    &lt;p class="examples"&gt;&lt;i&gt; some examples &lt;/i&gt;&lt;/p&gt;
+
+    :
+    &lt;p&gt; after the 100th paragraphs&lt;/p&gt;
+&lt;/body&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <p>Using a class and format them later, I can change all the examples without worrying that it
+        may affect other content elements.
+        And even if I decided not to format them, I can remove all the rules without the need to
+        edit the html. (they are still examples regardless of whether they are formatted or not.)
+    </p>
+
+    <p>As for the CSS Tags, I would recommend this article:
+        <a href="https://www.onblastblog.com/css3-cheat-sheet/" target="_blank">Comprehensive CSS
+            Cheat Sheet + PDF</a>"
 
 
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
