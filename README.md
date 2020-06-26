@@ -1,4 +1,4 @@
-![by Donovan](http://www.donovanlo.sg/images/donovanlogo150x131.png)  
+![by Donovan](http://resume.donovanlo.sg/images/donovanlogo150x131.png)  
 
 # CSS Styling Tips
 
